@@ -1,28 +1,27 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <sidebar-vue></sidebar-vue>
+    <router-view/>
+    <footer class="footer">
+      Made in <b-icon icon="heart-fill" variant="danger"></b-icon> with VUE
+    </footer>
   </div>
 </template>
 
+<style scoped>
+    .footer{
+      text-align: center;
+      font-weight: bolder;
+      font-style: italic;
+    }
+</style>
+
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import SidebarVue from './components/Sidebar.vue'
 
 export default {
-  name: 'App',
   components: {
-    HelloWorld
-  }
+    SidebarVue
+  }  
 }
 </script>
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
