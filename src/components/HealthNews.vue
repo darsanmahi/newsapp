@@ -1,7 +1,7 @@
 <template>
-    <div class="headlines">
+    <div class="healthnews">
         <b-container class="text-center">
-            <h1>Headlines</h1>
+            <h1>Health News <b-icon-heart-fill></b-icon-heart-fill></h1>
         </b-container>
         <b-container>
             <b-row>
@@ -25,7 +25,6 @@
 <style scoped>
     *{
         box-sizing: border-box;
-        margin: 0;
     }
 
     .headline-card{

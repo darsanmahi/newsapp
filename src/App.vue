@@ -3,7 +3,7 @@
     <sidebar-vue></sidebar-vue>
     <router-view/>
     <footer class="footer">
-      Made in <b-icon icon="heart-fill" variant="danger"></b-icon> with VUE
+      Made with <b-icon icon="heart-fill" variant="danger"></b-icon> using VUE
     </footer>
   </div>
 </template>

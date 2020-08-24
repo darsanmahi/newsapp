@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <headlines-vue :articles="articles" ></headlines-vue>
-  </div>
+    <div class="science">
+        <ScienceNewsVue :articles="articles"></ScienceNewsVue>
+    </div>
 </template>
 
 <script>
-import HeadlinesVue from '../components/Headlines.vue';
+import ScienceNewsVue from '../components/ScienceNews';
 import axios from 'axios';
 
 
 export default {
-  name: 'Home',
+  name: 'Science',
   components: {
-    HeadlinesVue,
+    ScienceNewsVue
   },
   data() {
     return {
@@ -21,7 +21,7 @@ export default {
     }
   },
   created() {
-    axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey='+this.apikey)
+    axios.get('https://newsapi.org/v2/top-headlines?country=in&category=science&apiKey='+this.apikey)
     .then(response => {
       this.articles = response.data.articles;
       console.log(response.data.articles);

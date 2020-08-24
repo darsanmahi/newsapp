@@ -1,18 +1,18 @@
 <template>
-  <div class="home">
-    <headlines-vue :articles="articles" ></headlines-vue>
-  </div>
+    <div class="business">
+        <BusinessNewsVue :articles="articles"></BusinessNewsVue>
+    </div>
 </template>
 
 <script>
-import HeadlinesVue from '../components/Headlines.vue';
+import BusinessNewsVue from '../components/BusinessNews';
 import axios from 'axios';
 
 
 export default {
-  name: 'Home',
+  name: 'Business',
   components: {
-    HeadlinesVue,
+    BusinessNewsVue,
   },
   data() {
     return {
@@ -21,7 +21,7 @@ export default {
     }
   },
   created() {
-    axios.get('https://newsapi.org/v2/top-headlines?country=in&apiKey='+this.apikey)
+    axios.get('https://newsapi.org/v2/top-headlines?country=in&category=business&apiKey='+this.apikey)
     .then(response => {
       this.articles = response.data.articles;
       console.log(response.data.articles);

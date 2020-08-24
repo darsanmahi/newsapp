@@ -1,10 +1,10 @@
 <template>
-    <div class="headlines">
+    <div class="businessnews">
         <b-container class="text-center">
-            <h1>Headlines</h1>
+            <h1>Business News <b-icon-cash-stack></b-icon-cash-stack> </h1>
         </b-container>
         <b-container>
-            <b-row>
+            <b-row class="text-center">
                 <b-col v-for="(article, index) in articles" :key="index">
                     <b-card bg-variant="light" text-variant="black" class="headline-card text-center" :img-src="article.urlToImage">
                         <b-card-title> {{article.title}} </b-card-title>
@@ -25,7 +25,6 @@
 <style scoped>
     *{
         box-sizing: border-box;
-        margin: 0;
     }
 
     .headline-card{
@@ -35,6 +34,7 @@
         max-width: 530px;
     }
 </style>
+
 
 <script>
 export default {
