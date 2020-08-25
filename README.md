@@ -1,5 +1,7 @@
 # newsapp
 
+git clone https://github.com/darsanmahi/newsapp.git
+
 ## Project setup
 ```
 npm install
