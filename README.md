@@ -1,6 +1,6 @@
 # newsapp
 
-git clone https://github.com/darsanmahi/newsapp.git
+git clone https://github.com/priyadarsanmahendiran/newsapp.git
 
 ## Project setup
 ```
